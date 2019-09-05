@@ -1,0 +1,62 @@
+<div class="container" ng-controller="feedCtrl" id="feed">
+  <a ng-href="/" title="Go to home Page">Home</a>
+
+  <div class="page-header text-center">
+    <div class="row">
+      <div class="col-sm-12">
+        <!-- <button class="btn btn-success back">Back</button> -->
+        <h2>
+          <strong>News-Categories</strong>
+        </h2>
+        <div class="btn-toolbar">
+          <ul>
+            <li ng-repeat="category in categories">
+              <button
+                ng-click="categorize( category )"
+                title="{{ category | uppercase }}"
+              >
+                {{ category | uppercase }}
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 col-sm-6" ng-repeat="article in articles">
+      <div class="card ">
+        <div class="abt_img">
+          <img
+            ng-if="article.urlToImage"
+            ng-src="{{ article.urlToImage }}"
+            class="img-responsive zoom"
+            alt="Image"
+            style="width:100%"
+          />
+        </div>
+        <h3 class="overflow ellipsis" ng-if="article.title">
+          {{ article.title }}
+        </h3>
+        <p ng-if="article.source.name">
+          <strong>Source:</strong>{{ article.source.name }}
+        </p>
+        <p class="overflow ellipsis" ng-if="article.author">
+          <strong>Author:</strong>{{ article.author }}
+        </p>
+        <p class="overflow ellipsis" ng-if="article.description">
+          <strong>Description:</strong>{{ article.description }}
+        </p>
+        <p ng-if="article.publishedAt">
+          <strong>Published At:</strong
+          >{{ article.publishedAt | date: "medium" }}
+        </p>
+        <a ng-href="{{ article.url }}" target="_blank" ng-if="article.url"
+          ><button class="btn btn-primary" title="Visit Site">
+            Go To News Page
+          </button></a
+        >
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: black;
+}
+a,
+a:hover {
+  text-decoration: none;
+}
+.img-responsive {
+  width: 100%;
+  height: auto;
+}
+
+.zoom {
+  transition: all 0.3s;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.card {
+  background: #f8f9fa;
+}
+.zoom:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.1);
+}
+.abt_img {
+  position: relative;
+  overflow: hidden;
+}
+.abt_img img {
+  max-width: 100%;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+#home .card {
+  width: 100%;
+}
+
+#home h1,
+#feed h2 {
+  color: white;
+  text-align: center;
+  margin: 10px auto;
+}
+#feed {
+  margin-top: 15px;
+}
+#feed a {
+  font-size: 18px;
+}
+#feed ul li {
+  display: inline;
+}
+#feed button,
+#feed ul,
+#feed li {
+  margin: 5px auto;
+  text-align: center;
+}
+
+#feed .page-header .back {
+  display: inline;
+}
+#feed span {
+  margin: 5px;
+}
+
+#feed .card {
+  padding: 5px;
+  margin-bottom: 5px;
+}
+#feed .card button {
+  text-align: center;
+  margin: 0px 2px 2px 2px;
+}
